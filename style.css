@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-home: url(./assets/mountains-universe-1.png);
+    --bg-universe: url(./assets/mountains-universe02.png);
+    --bg-exploration: url(./assets/mountains-universe-3.png);
+    --bg-error: url(./assets/mountains-universe-3.png);
+    --txt-color: #E1E1E6;
+    --nav-txt: #C4C4CC;
+    --nav-txt-click: #FFF;
+}
+
+body {
+    height: 100vh;
+    background: var(--bg-home) no-repeat center center/cover;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Navegaçao */
+nav {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 7.2rem;
+}
+
+
+nav>ul {
+    height: 12.2rem;
+    width: 128rem;
+
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    padding-bottom: 4rem;
+    padding-left: 7.2rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--nav-txt);
+    font-size: 2.1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 21.6rem;
+}
+
+a:active {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: var(--txt-color);
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+
+/* HOME */
+.home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home h1 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--txt-color);
+    padding-top: 17.2rem;
+    padding-bottom: 2.4rem;
+
+}
+
+
+
+.home button {
+    border-radius: .5rem;
+    border: .2rem solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+
+
+    padding: 1.2rem 3.2rem;
+}
+
+.home button:hover {
+    opacity: 0.5;
+}
+
+/* Universe e Exploration textos*/
+.universe h1,
+.exploration h1 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 125%;
+    color: var(--txt-color);
+
+    margin-top: 6.2rem;
+    margin-bottom: 1.6rem;
+    margin-left: 10.2rem;
+}
+
+.universe p,
+.exploration p {
+    width: 64.8rem;
+
+    color: var(--txt-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 160%;
+    text-align: left;
+    margin-left: 10.2rem;
+}
+
+/* Background */
+
+body:has(.universe) {
+    background: var(--bg-universe) no-repeat top center/cover;
+}
+
+body:has(.exploration) {
+    background: var(--bg-exploration) no-repeat top center/cover;
+}
+
+body:has(.error) {
+    background: var(--bg-error) no-repeat top center/cover;
+}
